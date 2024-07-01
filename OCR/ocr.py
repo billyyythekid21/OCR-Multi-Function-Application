@@ -1,8 +1,8 @@
 import pytesseract
 from PIL import Image
 
-# Specify the path to the Tesseract executable
-pytesseract.pytesseract.tesseract_cmd = r'C:\Program Files\Tesseract-OCR\tesseract.exe'
+# Specify the path to the Tesseract executable (usually not needed on macOS if installed via Homebrew)
+# pytesseract.pytesseract.tesseract_cmd = r'/usr/local/bin/tesseract'
 
 def ocr_image(image_path):
     # Open an image file
@@ -11,7 +11,7 @@ def ocr_image(image_path):
         text = pytesseract.image_to_string(img)
     return text
 
-# Example usage
-image_path = 'path_to_your_image.png'
+# Settings
+image_path = 'test.png'
 extracted_text = ocr_image(image_path)
 print(extracted_text)
