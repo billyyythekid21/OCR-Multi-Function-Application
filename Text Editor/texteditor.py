@@ -3,7 +3,7 @@ from PIL import Image
 import tkinter as tk
 from tkinter import filedialog, Text, Scrollbar
 
-# Initialize tkinter
+# Initialise tkinter
 root = tk.Tk()
 root.title("OCR Text Editor")
 root.geometry("800x600")  # Set the window size
